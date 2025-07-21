@@ -12,6 +12,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT; // ici on stock le port 5000 dans un .env que l'on va chercher
 
+// mise en place des chemins
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
