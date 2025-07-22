@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import { clerkMiddleware } from "@clerk/express";
 
 import { connectDB } from "./lib/db.js";
 
@@ -16,6 +17,8 @@ const app = express();
 const PORT = process.env.PORT; // ici on stock le port 5000 dans un .env que l'on va chercher
 
 app.use(express.json());
+
+app.use(clerkMiddleware());
 
 // mise en place des chemins
 app.use("/api/users", userRoutes);
