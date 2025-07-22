@@ -1,21 +1,21 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema(
   {
     title: {
-      type: string,
-      required: trues,
+      type: String,
+      required: true,
     },
     artist: {
-      type: string,
+      type: String,
       required: true,
     },
     imageURL: {
-      type: string,
-      required: trues,
+      type: String,
+      required: true,
     },
     audioUrl: {
-      type: string,
+      type: String,
       required: true,
     },
     duration: {
